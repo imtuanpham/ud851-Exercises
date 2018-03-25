@@ -256,7 +256,6 @@ public class VisualizerView extends View {
     /**
      * Sets the scale for the minimum size of the shape
      *
-     * @param scale the scale for the size of the shape
      */
     public void setMinSizeScale(float scale) {
         TrailedShape.setMinSize(MIN_SIZE_DEFAULT * scale);

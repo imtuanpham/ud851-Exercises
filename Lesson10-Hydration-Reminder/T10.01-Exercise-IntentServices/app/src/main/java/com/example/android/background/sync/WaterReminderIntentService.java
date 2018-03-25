@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+package com.example.android.background.sync;
+
 // COMPLETED (9) Create WaterReminderIntentService and extend it from IntentService
 
 import android.app.IntentService;
@@ -26,7 +28,7 @@ public class WaterReminderIntentService extends IntentService {
 
 
     public WaterReminderIntentService() {
-        super(WaterReminderIntentService.class.getName());
+        super("WaterReminderIntentService");
     }
 
     @Override

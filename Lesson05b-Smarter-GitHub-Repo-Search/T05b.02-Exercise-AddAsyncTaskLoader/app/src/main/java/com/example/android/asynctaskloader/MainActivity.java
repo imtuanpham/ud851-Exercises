@@ -15,18 +15,19 @@
  */
 package com.example.android.asynctaskloader;
 
-import android.app.LoaderManager;
-import android.content.AsyncTaskLoader;
-import android.content.Loader;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.AsyncTaskLoader;
+import android.support.v4.content.Loader;
 
 import com.example.android.asynctaskloader.utilities.NetworkUtils;
 
@@ -36,6 +37,8 @@ import java.net.URL;
 
 // COMPLETED (1) implement LoaderManager.LoaderCallbacks<String> on MainActivity
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String> {
+
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     /* A constant to save and restore the URL that is being displayed */
     private static final String SEARCH_QUERY_URL_EXTRA = "query";
@@ -81,8 +84,11 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 //            mSearchResultsTextView.setText(rawJsonSearchResults);
         }
 
+        LoaderManager lm = getSupportLoaderManager();
+        Loader<String> loader = getSupportLoaderManager().getLoader(GITHUB_SEARCH_LOADER);
+
         // COMPLETED (24) Initialize the loader with GITHUB_SEARCH_LOADER as the ID, null for the bundle, and this for the context
-        getLoaderManager().initLoader(GITHUB_SEARCH_LOADER, null, this);
+        lm.initLoader(GITHUB_SEARCH_LOADER, null, this);
 
     }
 
@@ -111,22 +117,20 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         // COMPLETED (20) Use putString with SEARCH_QUERY_URL_EXTRA as the key and the String value of the URL as the value
 
         Bundle queryBundle = new Bundle();
-        queryBundle.putString(SEARCH_QUERY_URL_EXTRA, githubQuery);
+        queryBundle.putString(SEARCH_QUERY_URL_EXTRA, githubSearchUrl.toString());
 
         // COMPLETED (21) Call getSupportLoaderManager and store it in a LoaderManager variable
         // COMPLETED (22) Get our Loader by calling getLoader and passing the ID we specified
         // COMPLETED (23) If the Loader was null, initialize it. Else, restart it.
 
-//        LoaderManager lm = getSupportLoaderManager();
-//        Loader<String> loader = getSupportLoaderManager().getLoader(GITHUB_SEARCH_LOADER);
+        LoaderManager lm = getSupportLoaderManager();
+        Loader<String> loader = getSupportLoaderManager().getLoader(GITHUB_SEARCH_LOADER);
 
-        if (null == null) {
-            getSupportLoaderManager().initLoader(GITHUB_SEARCH_LOADER, queryBundle, this.);
+        if (loader == null) {
+            lm.initLoader(GITHUB_SEARCH_LOADER, queryBundle, this);
         } else {
-            getSupportLoaderManager().restartLoader(GITHUB_SEARCH_LOADER, queryBundle, this);
+            lm.restartLoader(GITHUB_SEARCH_LOADER, queryBundle, this);
         }
-
-
     }
 
     /**
@@ -160,6 +164,17 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     public Loader<String> onCreateLoader(int i, final Bundle args) {
         return new AsyncTaskLoader<String>(this) {
+
+            @Override
+            protected void onStartLoading() {
+//                super.onStartLoading();
+                if (args == null) {
+                    return;
+                }
+                mLoadingIndicator.setVisibility(View.VISIBLE);
+                forceLoad();
+            }
+
             @Override
             public String loadInBackground() {
                 // COMPLETED (9) Override loadInBackground
@@ -177,6 +192,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     return null;
                 }
 
+                Log.v(TAG, urlString);
+
                 URL searchUrl = null;
                 try {
                     searchUrl = new URL(urlString);
@@ -184,6 +201,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     e.printStackTrace();
                 }
                 String githubSearchResults = null;
+
+                Log.v(TAG, searchUrl.toString());
+
                 try {
                     githubSearchResults = NetworkUtils.getResponseFromHttpUrl(searchUrl);
                 } catch (IOException e) {
@@ -193,15 +213,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 return githubSearchResults;
             }
 
-            @Override
-            protected void onStartLoading() {
-                super.onStartLoading();
-                if (args == null) {
-                    return;
-                }
-                mLoadingIndicator.setVisibility(View.VISIBLE);
-                forceLoad();
-            }
+
         };
     }
 
