@@ -33,16 +33,16 @@ public class ChildActivity extends AppCompatActivity {
         /* Typical usage of findViewById... */
         mDisplayText = (TextView) findViewById(R.id.tv_display);
 
-        // COMPLETED (3) Use the getIntent method to store the Intent that started this Activity in a variable
+        // TODO COMPLETED (3) Use the getIntent method to store the Intent that started this Activity in a variable
         Intent parentActivityIntent = getIntent();
 
-        // COMPLETED (4) Create an if statement to check if this Intent has the extra we passed from MainActivity
+        // TODO COMPLETED (4) Create an if statement to check if this Intent has the extra we passed from MainActivity
         if (parentActivityIntent.hasExtra(Intent.EXTRA_TEXT)) {
             String inputText = parentActivityIntent.getStringExtra(Intent.EXTRA_TEXT);
             mDisplayText.setText(inputText);
         }
-            // COMPLETED (5) If the Intent contains the correct extra, retrieve the text
+            // TODO COMPLETED (5) If the Intent contains the correct extra, retrieve the text
 
-            // COMPLETED (6) If the Intent contains the correct extra, use it to set the TextView text
+            // TODO COMPLETED (6) If the Intent contains the correct extra, use it to set the TextView text
     }
 }

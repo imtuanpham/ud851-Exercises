@@ -51,7 +51,7 @@ public class AddTaskActivity extends AppCompatActivity {
      */
     public void onClickAddTask(View view) {
         // Not yet implemented
-        // COMPLETED (6) Check if EditText is empty, if not retrieve input and store it in a ContentValues object
+        // TODO COMPLETED (6) Check if EditText is empty, if not retrieve input and store it in a ContentValues object
         EditText descEditText = (EditText) findViewById(R.id.editTextTaskDescription);
         String input = descEditText.getText().toString();
 
@@ -61,11 +61,11 @@ public class AddTaskActivity extends AppCompatActivity {
         contentValues.put(TaskContract.TaskEntry.COLUMN_DESCRIPTION, input);
         contentValues.put(TaskContract.TaskEntry.COLUMN_PRIORITY, mPriority);
 
-        // COMPLETED (7) Insert new task data via a ContentResolver
+        // TODO COMPLETED (7) Insert new task data via a ContentResolver
         ContentResolver contentResolver = getContentResolver();
         Uri insertUri = contentResolver.insert(TaskContract.TaskEntry.CONTENT_URI, contentValues);
 
-        // COMPLETED (8) Display the URI that's returned with a Toast
+        // TODO COMPLETED (8) Display the URI that's returned with a Toast
         // [Hint] Don't forget to call finish() to return to MainActivity after this insert is complete
         Toast.makeText(this, insertUri.toString(), Toast.LENGTH_LONG).show();
 

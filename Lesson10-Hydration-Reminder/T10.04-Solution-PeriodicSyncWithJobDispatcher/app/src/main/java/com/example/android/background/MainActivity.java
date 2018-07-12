@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements
         /** Set the original values in the UI **/
         updateWaterCount();
         updateChargingReminderCount();
-        // COMPLETED (23) Schedule the charging reminder
+        // TODO COMPLETED (23) Schedule the charging reminder
         ReminderUtilities.scheduleChargingReminder(this);
 
         /** Setup the shared preference listener **/
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements
         startService(incrementWaterCountIntent);
     }
 
-    // COMPLETED (24) Remove the button and testNotification code
+    // TODO COMPLETED (24) Remove the button and testNotification code
 
     @Override
     protected void onDestroy() {

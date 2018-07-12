@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.GuestViewHolder> {
 
     private Context mContext;
-    // COMPLETED (8) Add a new local variable mCount to store the count of items to be displayed in the recycler view
+    // TODO COMPLETED (8) Add a new local variable mCount to store the count of items to be displayed in the recycler view
 
     private Integer mCount;
 
@@ -20,10 +20,10 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
      *
      * @param context the calling context/activity
      */
-    // COMPLETED (9) Update the Adapter constructor to accept an integer for the count along with the context
+    // TODO COMPLETED (9) Update the Adapter constructor to accept an integer for the count along with the context
     public GuestListAdapter(Context context, Integer count) {
         this.mContext = context;
-        // COMPLETED (10) Set the local mCount to be equal to count
+        // TODO COMPLETED (10) Set the local mCount to be equal to count
         this.mCount = count;
     }
 
@@ -41,7 +41,7 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
     }
 
 
-    // COMPLETED (11) Modify the getItemCount to return the mCount value rather than 0
+    // TODO COMPLETED (11) Modify the getItemCount to return the mCount value rather than 0
     @Override
     public int getItemCount() {
         return this.mCount;

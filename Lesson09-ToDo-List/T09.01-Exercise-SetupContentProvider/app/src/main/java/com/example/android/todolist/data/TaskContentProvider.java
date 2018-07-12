@@ -22,7 +22,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 
-// COMPLETED (1) Verify that TaskContentProvider extends from ContentProvider and implements required methods
+// TODO COMPLETED (1) Verify that TaskContentProvider extends from ContentProvider and implements required methods
 public class TaskContentProvider extends ContentProvider {
 
     private TaskDbHelper taskDbHelper;
@@ -34,7 +34,7 @@ public class TaskContentProvider extends ContentProvider {
      */
     @Override
     public boolean onCreate() {
-        // COMPLETED (2) Complete onCreate() and initialize a TaskDbhelper on startup
+        // TODO COMPLETED (2) Complete onCreate() and initialize a TaskDbhelper on startup
         // [Hint] Declare the DbHelper as a global variable
 
         taskDbHelper = new TaskDbHelper(getContext());

@@ -57,14 +57,14 @@ public class MainActivity extends AppCompatActivity {
         String githubQuery = mSearchBoxEditText.getText().toString();
         URL githubSearchUrl = NetworkUtils.buildUrl(githubQuery);
         mUrlDisplayTextView.setText(githubSearchUrl.toString());
-        // COMPLETED (4) Create a new GithubQueryTask and call its execute method, passing in the url to query
+        // TODO COMPLETED (4) Create a new GithubQueryTask and call its execute method, passing in the url to query
         new GithubQueryTask().execute(githubSearchUrl);
     }
 
-    // COMPLETED (1) Create a class called GithubQueryTask that extends AsyncTask<URL, Void, String>
-    // COMPLETED (2) Override the doInBackground method to perform the query. Return the results.
+    // TODO COMPLETED (1) Create a class called GithubQueryTask that extends AsyncTask<URL, Void, String>
+    // TODO COMPLETED (2) Override the doInBackground method to perform the query. Return the results.
     // (Hint: You've already written the code to perform the query)
-    // COMPLETED (3) Override onPostExecute to display the results in the TextView
+    // TODO COMPLETED (3) Override onPostExecute to display the results in the TextView
 
     private class GithubQueryTask extends AsyncTask<URL, Void, String> {
         @Override

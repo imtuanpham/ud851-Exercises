@@ -27,7 +27,7 @@ import android.support.v7.preference.PreferenceFragmentCompat;
 import android.support.v7.preference.PreferenceScreen;
 import android.widget.Toast;
 
-// COMPLETED (1) Implement OnSharedPreferenceChangeListener
+// TODO COMPLETED (1) Implement OnSharedPreferenceChangeListener
 
 public class SettingsFragment extends PreferenceFragmentCompat implements
         OnSharedPreferenceChangeListener {
@@ -38,7 +38,7 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
         // Add visualizer preferences, defined in the XML file in res->xml->pref_visualizer
         addPreferencesFromResource(R.xml.pref_visualizer);
 
-        // COMPLETED (3) Get the preference screen, get the number of preferences and iterate through
+        // TODO COMPLETED (3) Get the preference screen, get the number of preferences and iterate through
         // all of the preferences if it is not a checkbox preference, call the setSummary method
         // passing in a preference and the value of the preference
 
@@ -58,7 +58,7 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
         }
     }
 
-    // COMPLETED (4) Override onSharedPreferenceChanged and, if it is not a checkbox preference,
+    // TODO COMPLETED (4) Override onSharedPreferenceChanged and, if it is not a checkbox preference,
     // call setPreferenceSummary on the changed preference
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
@@ -73,7 +73,7 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
         }
     }
 
-    // COMPLETED (2) Create a setPreferenceSummary which takes a Preference and String value as parameters.
+    // TODO COMPLETED (2) Create a setPreferenceSummary which takes a Preference and String value as parameters.
     // This method should check if the preference is a ListPreference and, if so, find the label
     // associated with the value. You can do this by using the findIndexOfValue and getEntries methods
     // of Preference.
@@ -95,7 +95,7 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
         }
     }
 
-    // COMPLETED (5) Register and unregister the OnSharedPreferenceChange listener (this class) in
+    // TODO COMPLETED (5) Register and unregister the OnSharedPreferenceChange listener (this class) in
     // onCreate and onDestroy respectively.
     
     @Override

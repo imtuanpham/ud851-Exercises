@@ -23,7 +23,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-// COMPLETED (8) Implement GreenAdapter.ListItemClickListener from the MainActivity
+// TODO COMPLETED (8) Implement GreenAdapter.ListItemClickListener from the MainActivity
 public class MainActivity extends AppCompatActivity implements GreenAdapter.ListItemClickListener {
 
     private static final int NUM_LIST_ITEMS = 100;
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements GreenAdapter.List
     private GreenAdapter mAdapter;
     private RecyclerView mNumbersList;
 
-    // COMPLETED (9) Create a Toast variable called mToast to store the current Toast
+    // TODO COMPLETED (9) Create a Toast variable called mToast to store the current Toast
     private Toast mToast;
 
     @Override
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements GreenAdapter.List
          */
         mNumbersList.setHasFixedSize(true);
 
-        // COMPLETED (13) Pass in this as the ListItemClickListener to the GreenAdapter constructor
+        // TODO COMPLETED (13) Pass in this as the ListItemClickListener to the GreenAdapter constructor
         /*
          * The GreenAdapter is responsible for displaying each item in the list.
          */
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements GreenAdapter.List
              * ways. (in our humble opinion)
              */
             case R.id.action_refresh:
-                // COMPLETED (14) Pass in this as the ListItemClickListener to the GreenAdapter constructor
+                // TODO COMPLETED (14) Pass in this as the ListItemClickListener to the GreenAdapter constructor
                 mAdapter = new GreenAdapter(NUM_LIST_ITEMS, this);
                 mNumbersList.setAdapter(mAdapter);
                 return true;
@@ -105,9 +105,9 @@ public class MainActivity extends AppCompatActivity implements GreenAdapter.List
         return super.onOptionsItemSelected(item);
     }
 
-    // COMPLETED (10) Override ListItemClickListener's onListItemClick method
-    // COMPLETED (11) In the beginning of the method, cancel the Toast if it isn't null
-    // COMPLETED (12) Show a Toast when an item is clicked, displaying that item number that was clicked
+    // TODO COMPLETED (10) Override ListItemClickListener's onListItemClick method
+    // TODO COMPLETED (11) In the beginning of the method, cancel the Toast if it isn't null
+    // TODO COMPLETED (12) Show a Toast when an item is clicked, displaying that item number that was clicked
 
     @Override
     public void onListItemClick(int idx) {

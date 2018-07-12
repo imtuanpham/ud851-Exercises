@@ -37,10 +37,10 @@ public class MainActivity extends AppCompatActivity {
      * @param v Button that was clicked.
      */
     public void onClickOpenWebpageButton(View v) {
-        // COMPLETED (5) Create a String that contains a URL ( make sure it starts with http:// or https:// )
+        // TODO COMPLETED (5) Create a String that contains a URL ( make sure it starts with http:// or https:// )
         String urlAsString = "http://www.udacity.com";
 
-        // COMPLETED (6) Replace the Toast with a call to openWebPage, passing in the URL String from the previous step
+        // TODO COMPLETED (6) Replace the Toast with a call to openWebPage, passing in the URL String from the previous step
         openWebPage(urlAsString);
     }
 
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
-    // COMPLETED (1) Create a method called openWebPage that accepts a String as a parameter
+    // TODO COMPLETED (1) Create a method called openWebPage that accepts a String as a parameter
     /**
      * This method fires off an implicit Intent to open a webpage.
      *
@@ -88,21 +88,21 @@ public class MainActivity extends AppCompatActivity {
      *            scheme of the URI expected with this Intent according to the Common Intents page
      */
     private void openWebPage(String url) {
-        // COMPLETED (2) Use Uri.parse to parse the String into a Uri
+        // TODO COMPLETED (2) Use Uri.parse to parse the String into a Uri
         /*
          * We wanted to demonstrate the Uri.parse method because its usage occurs frequently. You
          * could have just as easily passed in a Uri as the parameter of this method.
          */
         Uri webpage = Uri.parse(url);
 
-        // COMPLETED (3) Create an Intent with Intent.ACTION_VIEW and the webpage Uri as parameters
+        // TODO COMPLETED (3) Create an Intent with Intent.ACTION_VIEW and the webpage Uri as parameters
         /*
          * Here, we create the Intent with the action of ACTION_VIEW. This action allows the user
          * to view particular content. In this case, our webpage URL.
          */
         Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
 
-        // COMPLETED (4) Verify that this Intent can be launched and then call startActivity
+        // TODO COMPLETED (4) Verify that this Intent can be launched and then call startActivity
         /*
          * This is a check we perform with every implicit Intent that we launch. In some cases,
          * the device where this code is running might not have an Activity to perform the action

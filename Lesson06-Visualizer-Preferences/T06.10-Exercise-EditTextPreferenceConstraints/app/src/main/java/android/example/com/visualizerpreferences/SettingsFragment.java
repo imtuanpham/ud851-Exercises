@@ -27,7 +27,7 @@ import android.support.v7.preference.PreferenceFragmentCompat;
 import android.support.v7.preference.PreferenceScreen;
 import android.widget.Toast;
 
-// COMPLETED (1) Implement OnPreferenceChangeListener
+// TODO COMPLETED (1) Implement OnPreferenceChangeListener
 public class SettingsFragment extends PreferenceFragmentCompat implements
         OnSharedPreferenceChangeListener, Preference.OnPreferenceChangeListener {
 
@@ -56,7 +56,7 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
             }
         }
 
-        // COMPLETED (3) Add the OnPreferenceChangeListener specifically to the EditTextPreference
+        // TODO COMPLETED (3) Add the OnPreferenceChangeListener specifically to the EditTextPreference
     }
 
     @Override
@@ -107,7 +107,7 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
                 .unregisterOnSharedPreferenceChangeListener(this);
     }
 
-    // COMPLETED (2) Override onPreferenceChange. This method should try to convert the new preference value
+    // TODO COMPLETED (2) Override onPreferenceChange. This method should try to convert the new preference value
     // to a float; if it cannot, show a helpful error message and return false. If it can be converted
     // to a float check that that float is between 0 (exclusive) and 3 (inclusive). If it isn't, show
     // an error message and return false. If it is a valid number, return true.

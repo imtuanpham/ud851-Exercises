@@ -23,13 +23,13 @@ import android.support.v7.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
 
-    // COMPLETED (1) Create a private static final int called NUM_LIST_ITEMS and set it equal to 100
+    // TODO COMPLETED (1) Create a private static final int called NUM_LIST_ITEMS and set it equal to 100
     private static final int NUM_LIST_ITEMS = 1000;
 
-    // COMPLETED (2) Create a GreenAdapter variable called mAdapter
+    // TODO COMPLETED (2) Create a GreenAdapter variable called mAdapter
     private GreenAdapter mAdapter;
 
-    // COMPLETED (3) Create a RecyclerView variable called mNumbersList
+    // TODO COMPLETED (3) Create a RecyclerView variable called mNumbersList
     private RecyclerView mNumbersList;
 
     @Override
@@ -37,21 +37,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // COMPLETED (4) Use findViewById to store a reference to the RecyclerView in mNumbersList
+        // TODO COMPLETED (4) Use findViewById to store a reference to the RecyclerView in mNumbersList
         mNumbersList = (RecyclerView) findViewById(R.id.rv_numbers);
 
-        // COMPLETED (5) Create a LinearLayoutManager variable called layoutManager
-        // COMPLETED (6) Use setLayoutManager on mNumbersList with the LinearLayoutManager we created above
+        // TODO COMPLETED (5) Create a LinearLayoutManager variable called layoutManager
+        // TODO COMPLETED (6) Use setLayoutManager on mNumbersList with the LinearLayoutManager we created above
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         mNumbersList.setLayoutManager(layoutManager);
 
-        // COMPLETED (7) Use setHasFixedSize(true) to designate that the contents of the RecyclerView won't change an item's size
+        // TODO COMPLETED (7) Use setHasFixedSize(true) to designate that the contents of the RecyclerView won't change an item's size
         mNumbersList.setHasFixedSize(true);
 
-        // COMPLETED (8) Store a new GreenAdapter in mAdapter and pass it NUM_LIST_ITEMS
+        // TODO COMPLETED (8) Store a new GreenAdapter in mAdapter and pass it NUM_LIST_ITEMS
         mAdapter = new GreenAdapter(NUM_LIST_ITEMS);
 
-        // COMPLETED (9) Set the GreenAdapter you created on mNumbersList
+        // TODO COMPLETED (9) Set the GreenAdapter you created on mNumbersList
         mNumbersList.setAdapter(mAdapter);
     }
 }

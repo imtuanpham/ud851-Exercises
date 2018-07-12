@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private TextView mLifecycleDisplay;
 
-    // COMPLETED (1) Declare and instantiate a static ArrayList of Strings called mLifecycleCallbacks
+    // TODO COMPLETED (1) Declare and instantiate a static ArrayList of Strings called mLifecycleCallbacks
     private static ArrayList<String> mLifecycleCallbacks = new ArrayList<String>();
 
     /**
@@ -74,12 +74,12 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        // COMPLETED (4) Iterate backwards through mLifecycleCallbacks, appending each String and a newline to mLifecycleDisplay
+        // TODO COMPLETED (4) Iterate backwards through mLifecycleCallbacks, appending each String and a newline to mLifecycleDisplay
         for(int i = 0; i < mLifecycleCallbacks.size(); i++) {
             mLifecycleDisplay.append(mLifecycleCallbacks.get(mLifecycleCallbacks.size() - 1 - i) + "\n\n");
         }
 
-        // COMPLETED (5) Clear mLifecycleCallbacks after iterating through it
+        // TODO COMPLETED (5) Clear mLifecycleCallbacks after iterating through it
         mLifecycleCallbacks.clear();
 
         logAndAppend(ON_CREATE);
@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
 
-        // COMPLETED (2) Add the ON_STOP String to the front of mLifecycleCallbacks
+        // TODO COMPLETED (2) Add the ON_STOP String to the front of mLifecycleCallbacks
         mLifecycleCallbacks.add(0, ON_STOP);
 
         logAndAppend(ON_STOP);
@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
 
-        // COMPLETED (3) Add the ON_DESTROY String to the front of mLifecycleCallbacks
+        // TODO COMPLETED (3) Add the ON_DESTROY String to the front of mLifecycleCallbacks
         mLifecycleCallbacks.add(0, ON_DESTROY);
         logAndAppend(ON_DESTROY);
     }

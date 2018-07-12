@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-        // COMPLETED (1) Create a new xml file called flight_info in the layout directory
-        // COMPLETED (3) Move all Views in the flight information section from activity_main to flight_info
+        // TODO COMPLETED (1) Create a new xml file called flight_info in the layout directory
+        // TODO COMPLETED (3) Move all Views in the flight information section from activity_main to flight_info
 -->
 
 <layout xmlns:app="http://schemas.android.com/apk/res-auto"

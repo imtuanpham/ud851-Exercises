@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     private GuestListAdapter mAdapter;
 
-    // COMPLETED (1) Create a local field member of type SQLiteDatabase called mDb
+    // TODO COMPLETED (1) Create a local field member of type SQLiteDatabase called mDb
     private SQLiteDatabase mDb;
 
     @Override
@@ -33,19 +33,19 @@ public class MainActivity extends AppCompatActivity {
         // Set layout for the RecyclerView, because it's a list we are using the linear layout
         waitlistRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // COMPLETED (2) Create a WaitlistDbHelper instance, pass "this" to the constructor as context
+        // TODO COMPLETED (2) Create a WaitlistDbHelper instance, pass "this" to the constructor as context
         WaitlistDbHelper dbHelper = new WaitlistDbHelper(this);
 
-        // COMPLETED (3) Get a writable database reference using getWritableDatabase and store it in mDb
+        // TODO COMPLETED (3) Get a writable database reference using getWritableDatabase and store it in mDb
         mDb = dbHelper.getWritableDatabase();
 
-        // COMPLETED (4) call insertFakeData from TestUtil and pass the database reference mDb
+        // TODO COMPLETED (4) call insertFakeData from TestUtil and pass the database reference mDb
         TestUtil.insertFakeData(mDb);
 
-        // COMPLETED (7) Run the getAllGuests function and store the result in a Cursor variable
+        // TODO COMPLETED (7) Run the getAllGuests function and store the result in a Cursor variable
         Cursor cursorGuests = getAllGuests();
 
-        // COMPLETED (12) Pass the resulting cursor count to the adapter
+        // TODO COMPLETED (12) Pass the resulting cursor count to the adapter
         // Create an adapter for that cursor to display the data
         mAdapter = new GuestListAdapter(this, cursorGuests.getCount());
 
@@ -63,9 +63,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    // COMPLETED (5) Create a private method called getAllGuests that returns a cursor
+    // TODO COMPLETED (5) Create a private method called getAllGuests that returns a cursor
 
-    // COMPLETED (6) Inside, call query on mDb passing in the table name and projection String [] order by COLUMN_TIMESTAMP
+    // TODO COMPLETED (6) Inside, call query on mDb passing in the table name and projection String [] order by COLUMN_TIMESTAMP
 
     private Cursor getAllGuests() {
         return mDb.query(WaitlistContract.WaitlistEntry.TABLE_NAME,

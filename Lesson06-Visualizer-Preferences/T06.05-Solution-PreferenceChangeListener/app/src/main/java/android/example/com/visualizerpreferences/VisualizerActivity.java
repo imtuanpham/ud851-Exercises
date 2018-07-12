@@ -33,7 +33,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-// COMPLETED (1) Implement OnSharedPreferenceChangeListener
+// TODO COMPLETED (1) Implement OnSharedPreferenceChangeListener
 public class VisualizerActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     private static final int MY_PERMISSION_RECORD_AUDIO_REQUEST_CODE = 88;
@@ -58,12 +58,12 @@ public class VisualizerActivity extends AppCompatActivity implements SharedPrefe
         mVisualizerView.setShowTreble(true);
         mVisualizerView.setMinSizeScale(1);
         mVisualizerView.setColor(getString(R.string.pref_color_red_value));
-        // COMPLETED (3) Register the listener
+        // TODO COMPLETED (3) Register the listener
         // Register the listener
         sharedPreferences.registerOnSharedPreferenceChangeListener(this);
     }
 
-    // COMPLETED (2) Override the onSharedPreferenceChanged method and update the show bass preference
+    // TODO COMPLETED (2) Override the onSharedPreferenceChanged method and update the show bass preference
     // Updates the screen if the shared preferences change. This method is required when you make a
     // class implement OnSharedPreferenceChangedListener
     @Override
@@ -73,7 +73,7 @@ public class VisualizerActivity extends AppCompatActivity implements SharedPrefe
         }
     }
 
-    // COMPLETED (4) Override onDestroy and unregister the listener
+    // TODO COMPLETED (4) Override onDestroy and unregister the listener
     @Override
     protected void onDestroy() {
         super.onDestroy();

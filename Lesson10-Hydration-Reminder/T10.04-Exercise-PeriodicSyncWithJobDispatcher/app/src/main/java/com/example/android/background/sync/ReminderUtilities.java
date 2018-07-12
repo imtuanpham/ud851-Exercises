@@ -28,7 +28,7 @@ import com.firebase.jobdispatcher.Trigger;
 import java.util.concurrent.TimeUnit;
 
 public class ReminderUtilities {
-    // COMPLETED (15) Create three constants and one variable:
+    // TODO COMPLETED (15) Create three constants and one variable:
     //  - REMINDER_INTERVAL_SECONDS should be an integer constant storing the number of seconds in 15 minutes
     //  - SYNC_FLEXTIME_SECONDS should also be an integer constant storing the number of seconds in 15 minutes
     //  - REMINDER_JOB_TAG should be a String constant, storing something like "hydration_reminder_tag"
@@ -41,22 +41,22 @@ public class ReminderUtilities {
 
     private static boolean sInitialized;
 
-    // COMPLETED (16) Create a synchronized, public static method called scheduleChargingReminder that takes
+    // TODO COMPLETED (16) Create a synchronized, public static method called scheduleChargingReminder that takes
     // in a context. This method will use FirebaseJobDispatcher to schedule a job that repeats roughly
     // every REMINDER_INTERVAL_SECONDS when the phone is charging. It will trigger WaterReminderFirebaseJobService
     // Checkout https://github.com/firebase/firebase-jobdispatcher-android for an example
 
     synchronized public static void scheduleChargingReminder (Context context) {
-        // COMPLETED (17) If the job has already been initialized, return
+        // TODO COMPLETED (17) If the job has already been initialized, return
         if (sInitialized) return;
 
-        // COMPLETED (18) Create a new GooglePlayDriver
+        // TODO COMPLETED (18) Create a new GooglePlayDriver
         GooglePlayDriver googlePlayDriver = new GooglePlayDriver(context);
 
-        // COMPLETED (19) Create a new FirebaseJobDispatcher with the driver
+        // TODO COMPLETED (19) Create a new FirebaseJobDispatcher with the driver
         FirebaseJobDispatcher firebaseJobDispatcher = new FirebaseJobDispatcher(googlePlayDriver);
 
-        // COMPLETED (20) Use FirebaseJobDispatcher's newJobBuilder method to build a job which:
+        // TODO COMPLETED (20) Use FirebaseJobDispatcher's newJobBuilder method to build a job which:
         // - has WaterReminderFirebaseJobService as it's service
         // - has the tag REMINDER_JOB_TAG
         // - only triggers if the device is charging
@@ -78,10 +78,10 @@ public class ReminderUtilities {
                 .build();
 
 
-        // COMPLETED (21) Use dispatcher's schedule method to schedule the job
+        // TODO COMPLETED (21) Use dispatcher's schedule method to schedule the job
         firebaseJobDispatcher.schedule(constraintReminderJob);
 
-        // COMPLETED (22) Set sInitialized to true to mark that we're done setting up the job
+        // TODO COMPLETED (22) Set sInitialized to true to mark that we're done setting up the job
         sInitialized = true;
     }
 }

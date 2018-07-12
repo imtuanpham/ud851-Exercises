@@ -56,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
         String githubQuery = mSearchBoxEditText.getText().toString();
         URL githubSearchUrl = NetworkUtils.buildUrl(githubQuery);
         mUrlDisplayTextView.setText(githubSearchUrl.toString());
-        // COMPLETED (2) Call getResponseFromHttpUrl and display the results in mSearchResultsTextView
-        // COMPLETED (3) Surround the call to getResponseFromHttpUrl with a try / catch block to catch an IO Exception
+        // TODO COMPLETED (2) Call getResponseFromHttpUrl and display the results in mSearchResultsTextView
+        // TODO COMPLETED (3) Surround the call to getResponseFromHttpUrl with a try / catch block to catch an IO Exception
         String githubSearchResults = null;
         try {
             githubSearchResults = NetworkUtils.getResponseFromHttpUrl(githubSearchUrl);

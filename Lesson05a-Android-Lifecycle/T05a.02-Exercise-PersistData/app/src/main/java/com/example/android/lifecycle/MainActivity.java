@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    // COMPLETED (1) Create a key String called LIFECYCLE_CALLBACKS_TEXT_KEY
+    // TODO COMPLETED (1) Create a key String called LIFECYCLE_CALLBACKS_TEXT_KEY
     private static final String LIFECYCLE_CALLBACKS_TEXT_KEY = "callbacks";
 
     /* Constant values for the names of each respective lifecycle callback */
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         mLifecycleDisplay = (TextView) findViewById(R.id.tv_lifecycle_events_display);
 
-        // COMPLETED (6) If savedInstanceState is not null and contains LIFECYCLE_CALLBACKS_TEXT_KEY, set that text on our TextView
+        // TODO COMPLETED (6) If savedInstanceState is not null and contains LIFECYCLE_CALLBACKS_TEXT_KEY, set that text on our TextView
         if (savedInstanceState != null && savedInstanceState.containsKey(LIFECYCLE_CALLBACKS_TEXT_KEY)) {
             mLifecycleDisplay.setText(savedInstanceState.getString(LIFECYCLE_CALLBACKS_TEXT_KEY));
         }
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
         logAndAppend(ON_DESTROY);
     }
 
-    // COMPLETED (2) Override onSaveInstanceState
+    // TODO COMPLETED (2) Override onSaveInstanceState
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -152,9 +152,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Do steps 3 - 5 within onSaveInstanceState
-    // COMPLETED (3) Call super.onSaveInstanceState
-    // COMPLETED (4) Call logAndAppend with the ON_SAVE_INSTANCE_STATE String
-    // COMPLETED (5) Put the text from the TextView in the outState bundle
+    // TODO COMPLETED (3) Call super.onSaveInstanceState
+    // TODO COMPLETED (4) Call logAndAppend with the ON_SAVE_INSTANCE_STATE String
+    // TODO COMPLETED (5) Put the text from the TextView in the outState bundle
 
     /**
      * Logs to the console and appends the lifecycle method name to the TextView so that you can

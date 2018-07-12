@@ -120,14 +120,14 @@ public class TaskContentProvider extends ContentProvider {
     public Cursor query(@NonNull Uri uri, String[] projection, String selection,
                         String[] selectionArgs, String sortOrder) {
 
-        // COMPLETED (1) Get access to underlying database (read-only for query)
+        // TODO COMPLETED (1) Get access to underlying database (read-only for query)
         final SQLiteDatabase db = mTaskDbHelper.getReadableDatabase();
 
-        // COMPLETED (2) Write URI match code and set a variable to return a Cursor
+        // TODO COMPLETED (2) Write URI match code and set a variable to return a Cursor
         int match = sUriMatcher.match(uri);
         Cursor retCursor;
 
-        // COMPLETED (3) Query for the tasks directory and write a default case
+        // TODO COMPLETED (3) Query for the tasks directory and write a default case
         switch (match) {
             // Query for the tasks directory
             case TASKS:
@@ -144,7 +144,7 @@ public class TaskContentProvider extends ContentProvider {
                 throw new UnsupportedOperationException("Unknown uri: " + uri);
         }
 
-        // COMPLETED (4) Set a notification URI on the Cursor and return that Cursor
+        // TODO COMPLETED (4) Set a notification URI on the Cursor and return that Cursor
         retCursor.setNotificationUri(getContext().getContentResolver(), uri);
 
         // Return the desired Cursor

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    COMPLETED (1) Create a new xml file called flight_info in the layout directory
-    COMPLETED (2) Create a new xml file called boarding_info in the layout directory
+    TODO COMPLETED (1) Create a new xml file called flight_info in the layout directory
+    TODO COMPLETED (2) Create a new xml file called boarding_info in the layout directory
 
-    COMPLETED (9) Copy activity_main.xml into the layout-land folder to have 2 layout xml files for the same activity
-    COMPLETED (10) Re-organize the views in the landscape file to fit all in the one screen
+    TODO COMPLETED (9) Copy activity_main.xml into the layout-land folder to have 2 layout xml files for the same activity
+    TODO COMPLETED (10) Re-organize the views in the landscape file to fit all in the one screen
 -->
 <layout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -49,8 +49,8 @@
             tools:layout_constraintTop_creator="1" />
 
 <!--
-    COMPLETED (3) Move all Views in the flight information section from activity_main to flight_info
-    COMPLETED (5) Add an include tag in activity_main to include flightInfo in the right position
+    TODO COMPLETED (3) Move all Views in the flight information section from activity_main to flight_info
+    TODO COMPLETED (5) Add an include tag in activity_main to include flightInfo in the right position
 -->
         <include
             layout="@layout/flight_info"
@@ -157,8 +157,8 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewArrivalTimeLabel" />
 
 <!--
-    COMPLETED (4) Move all Views in the boarding information table from activity_main to boarding_info
-    COMPLETED (6) Add an include tag in activity_main to include boardingInfo in the right position
+    TODO COMPLETED (4) Move all Views in the boarding information table from activity_main to boarding_info
+    TODO COMPLETED (6) Add an include tag in activity_main to include boardingInfo in the right position
 -->
 
         <include

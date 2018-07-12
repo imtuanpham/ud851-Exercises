@@ -33,10 +33,10 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
-    // COMPLETED (1) Create a static final key to store the query's URL
+    // TODO COMPLETED (1) Create a static final key to store the query's URL
     private static final String KEY_QUERY_URL = "keyQueryURL";
 
-    // COMPLETED (2) Create a static final key to store the search's raw JSON
+    // TODO COMPLETED (2) Create a static final key to store the search's raw JSON
     private static final String KEY_SEARCH_RESULT_JSON = "keySearchResultJson";
 
     private EditText mSearchBoxEditText;
@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    // COMPLETED (3) Override onSaveInstanceState to persist data across Activity recreation
+    // TODO COMPLETED (3) Override onSaveInstanceState to persist data across Activity recreation
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
@@ -173,11 +173,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     // Do the following steps within onSaveInstanceState
-    // COMPLETED (4) Make sure super.onSaveInstanceState is called before doing anything else
+    // TODO COMPLETED (4) Make sure super.onSaveInstanceState is called before doing anything else
 
-    // COMPLETED (5) Put the contents of the TextView that contains our URL into a variable
-    // COMPLETED (6) Using the key for the query URL, put the string in the outState Bundle
+    // TODO COMPLETED (5) Put the contents of the TextView that contains our URL into a variable
+    // TODO COMPLETED (6) Using the key for the query URL, put the string in the outState Bundle
 
-    // COMPLETED (7) Put the contents of the TextView that contains our raw JSON search results into a variable
-    // COMPLETED (8) Using the key for the raw JSON search results, put the search results into the outState Bundle
+    // TODO COMPLETED (7) Put the contents of the TextView that contains our raw JSON search results into a variable
+    // TODO COMPLETED (8) Using the key for the raw JSON search results, put the search results into the outState Bundle
 }

@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
              */
             @Override
             public void onClick(View v) {
-                // COMPLETED (1) Retrieve the text from the EditText and store it in a variable
+                // TODO COMPLETED (1) Retrieve the text from the EditText and store it in a variable
                 /* We'll first get the text entered by the user in the EditText */
                 String textEntered = mNameEntry.getText().toString();
 
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                  */
                 Intent startChildActivityIntent = new Intent(context, destinationActivity);
 
-                // COMPLETED (2) Use the putExtra method to put the String from the EditText in the Intent
+                // TODO COMPLETED (2) Use the putExtra method to put the String from the EditText in the Intent
                 /*
                  * We use the putExtra method of the Intent class to pass some extra stuff to the
                  * Activity that we are starting. Generally, this data is quite simple, such as

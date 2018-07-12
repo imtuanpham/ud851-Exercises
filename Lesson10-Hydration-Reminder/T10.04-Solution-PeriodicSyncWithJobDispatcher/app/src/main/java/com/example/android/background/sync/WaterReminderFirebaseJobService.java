@@ -23,13 +23,13 @@ import com.firebase.jobdispatcher.JobParameters;
 import com.firebase.jobdispatcher.JobService;
 import com.firebase.jobdispatcher.RetryStrategy;
 
-// COMPLETED (3) WaterReminderFirebaseJobService should extend from JobService
+// TODO COMPLETED (3) WaterReminderFirebaseJobService should extend from JobService
 public class WaterReminderFirebaseJobService extends JobService {
 
     private AsyncTask mBackgroundTask;
 
 
-    // COMPLETED (4) Override onStartJob
+    // TODO COMPLETED (4) Override onStartJob
     /**
      * The entry point to your Job. Implementations should offload work to another thread of
      * execution as soon as possible.
@@ -43,15 +43,15 @@ public class WaterReminderFirebaseJobService extends JobService {
     @Override
     public boolean onStartJob(final JobParameters jobParameters) {
 
-        // COMPLETED (5) By default, jobs are executed on the main thread, so make an anonymous class extending
+        // TODO COMPLETED (5) By default, jobs are executed on the main thread, so make an anonymous class extending
         //  AsyncTask called mBackgroundTask.
         // Here's where we make an AsyncTask so that this is no longer on the main thread
         mBackgroundTask = new AsyncTask() {
 
-            // COMPLETED (6) Override doInBackground
+            // TODO COMPLETED (6) Override doInBackground
             @Override
             protected Object doInBackground(Object[] params) {
-                // COMPLETED (7) Use ReminderTasks to execute the new charging reminder task you made, use
+                // TODO COMPLETED (7) Use ReminderTasks to execute the new charging reminder task you made, use
                 // this service as the context (WaterReminderFirebaseJobService.this) and return null
                 // when finished.
                 Context context = WaterReminderFirebaseJobService.this;
@@ -61,7 +61,7 @@ public class WaterReminderFirebaseJobService extends JobService {
 
             @Override
             protected void onPostExecute(Object o) {
-                // COMPLETED (8) Override onPostExecute and called jobFinished. Pass the job parameters
+                // TODO COMPLETED (8) Override onPostExecute and called jobFinished. Pass the job parameters
                 // and false to jobFinished. This will inform the JobManager that your job is done
                 // and that you do not want to reschedule the job.
 
@@ -76,13 +76,13 @@ public class WaterReminderFirebaseJobService extends JobService {
             }
         };
 
-        // COMPLETED (9) Execute the AsyncTask
+        // TODO COMPLETED (9) Execute the AsyncTask
         mBackgroundTask.execute();
-        // COMPLETED (10) Return true
+        // TODO COMPLETED (10) Return true
         return true;
     }
 
-    // COMPLETED (11) Override onStopJob
+    // TODO COMPLETED (11) Override onStopJob
     /**
      * Called when the scheduling engine has decided to interrupt the execution of a running job,
      * most likely because the runtime constraints associated with the job are no longer satisfied.
@@ -93,8 +93,8 @@ public class WaterReminderFirebaseJobService extends JobService {
      */
     @Override
     public boolean onStopJob(JobParameters jobParameters) {
-        // COMPLETED (12) If mBackgroundTask is valid, cancel it
-        // COMPLETED (13) Return true to signify the job should be retried
+        // TODO COMPLETED (12) If mBackgroundTask is valid, cancel it
+        // TODO COMPLETED (13) Return true to signify the job should be retried
         if (mBackgroundTask != null) mBackgroundTask.cancel(true);
         return true;
     }

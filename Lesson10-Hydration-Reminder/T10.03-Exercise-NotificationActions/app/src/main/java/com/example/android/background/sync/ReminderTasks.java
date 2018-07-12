@@ -23,7 +23,7 @@ import com.example.android.background.utilities.PreferenceUtilities;
 public class ReminderTasks {
 
     public static final String ACTION_INCREMENT_WATER_COUNT = "increment-water-count";
-    //  COMPLETED (2) Add a public static constant called ACTION_DISMISS_NOTIFICATION
+    //  TODO COMPLETED (2) Add a public static constant called ACTION_DISMISS_NOTIFICATION
     public static final String ACTION_DISMISS_NOTIFICATION = "dismiss-notification";
 
     public static void executeTask(Context context, String action) {
@@ -32,12 +32,12 @@ public class ReminderTasks {
         } else if (ACTION_DISMISS_NOTIFICATION.equals(action)) {
             NotificationUtils.clearAllNotifications(context);
         }
-        //      COMPLETED (3) If the user ignored the reminder, clear the notification
+        //      TODO COMPLETED (3) If the user ignored the reminder, clear the notification
     }
 
     private static void incrementWaterCount(Context context) {
         PreferenceUtilities.incrementWaterCount(context);
-        //      COMPLETED (4) If the water count was incremented, clear any notifications
+        //      TODO COMPLETED (4) If the water count was incremented, clear any notifications
         NotificationUtils.clearAllNotifications(context);
     }
 }

@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private TextView mLifecycleDisplay;
 
-    // COMPLETED (1) Declare and instantiate a static ArrayList of Strings called mLifecycleCallbacks
+    // TODO COMPLETED (1) Declare and instantiate a static ArrayList of Strings called mLifecycleCallbacks
     /*
      * This ArrayList will keep track of lifecycle callbacks that occur after we are able to save
      * them. Since, as we've observed, the contents of the TextView are saved in onSaveInstanceState
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        // COMPLETED (4) Iterate backwards through mLifecycleCallbacks, appending each String and a newline to mLifecycleDisplay
+        // TODO COMPLETED (4) Iterate backwards through mLifecycleCallbacks, appending each String and a newline to mLifecycleDisplay
         /*
          * Since any updates to the UI we make after onSaveInstanceState (onStop, onDestroy, etc),
          * we use an ArrayList to track if these lifecycle events had occurred. If any of them have
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             mLifecycleDisplay.append(mLifecycleCallbacks.get(i) + "\n");
         }
 
-        // COMPLETED (5) Clear mLifecycleCallbacks after iterating through it
+        // TODO COMPLETED (5) Clear mLifecycleCallbacks after iterating through it
         /*
          * Once we've appended each callback from the ArrayList to the TextView, we need to clean
          * the ArrayList so we don't get duplicate entries in the TextView.
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
 
-        // COMPLETED (2) Add the ON_STOP String to the front of mLifecycleCallbacks
+        // TODO COMPLETED (2) Add the ON_STOP String to the front of mLifecycleCallbacks
         /*
          * Since any updates to the UI we make after onSaveInstanceState (onStop, onDestroy, etc),
          * we use an ArrayList to track if these lifecycle events had occurred. If any of them have
@@ -194,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
 
-        // COMPLETED (3) Add the ON_DESTROY String to the front of mLifecycleCallbacks
+        // TODO COMPLETED (3) Add the ON_DESTROY String to the front of mLifecycleCallbacks
         /*
          * Since any updates to the UI we make after onSaveInstanceState (onStop, onDestroy, etc),
          * we use an ArrayList to track if these lifecycle events had occurred. If any of them have

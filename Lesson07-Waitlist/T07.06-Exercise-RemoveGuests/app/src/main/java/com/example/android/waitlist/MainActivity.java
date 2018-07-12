@@ -56,12 +56,12 @@ public class MainActivity extends AppCompatActivity {
         // Link the adapter to the RecyclerView
         waitlistRecyclerView.setAdapter(mAdapter);
 
-        // COMPLETED (3) Create a new ItemTouchHelper with a SimpleCallback that handles both LEFT and RIGHT swipe directions
+        // TODO COMPLETED (3) Create a new ItemTouchHelper with a SimpleCallback that handles both LEFT and RIGHT swipe directions
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(
                 new WaitListSimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT)
         );
 
-        //COMPLETED (11) attach the ItemTouchHelper to the waitlistRecyclerView
+        //TODO COMPLETED (11) attach the ItemTouchHelper to the waitlistRecyclerView
         itemTouchHelper.attachToRecyclerView(waitlistRecyclerView);
     }
 
@@ -71,13 +71,13 @@ public class MainActivity extends AppCompatActivity {
             super(dragDirs, swipeDirs);
         }
 
-        // COMPLETED (4) Override onMove and simply return false inside
+        // TODO COMPLETED (4) Override onMove and simply return false inside
 
-        // COMPLETED (5) Override onSwiped
+        // TODO COMPLETED (5) Override onSwiped
 
-        // COMPLETED (8) Inside, get the viewHolder's itemView's tag and store in a long variable id
-        // COMPLETED (9) call removeGuest and pass through that id
-        // COMPLETED (10) call swapCursor on mAdapter passing in getAllGuests() as the argument
+        // TODO COMPLETED (8) Inside, get the viewHolder's itemView's tag and store in a long variable id
+        // TODO COMPLETED (9) call removeGuest and pass through that id
+        // TODO COMPLETED (10) call swapCursor on mAdapter passing in getAllGuests() as the argument
 
 
         @Override
@@ -160,9 +160,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // COMPLETED (1) Create a new function called removeGuest that takes long id as input and returns a boolean
+    // TODO COMPLETED (1) Create a new function called removeGuest that takes long id as input and returns a boolean
 
-    // COMPLETED (2) Inside, call mDb.delete to pass in the TABLE_NAME and the condition that WaitlistEntry._ID equals id
+    // TODO COMPLETED (2) Inside, call mDb.delete to pass in the TABLE_NAME and the condition that WaitlistEntry._ID equals id
 
     boolean removeGuest(long id) {
         return mDb.delete(WaitlistContract.WaitlistEntry.TABLE_NAME

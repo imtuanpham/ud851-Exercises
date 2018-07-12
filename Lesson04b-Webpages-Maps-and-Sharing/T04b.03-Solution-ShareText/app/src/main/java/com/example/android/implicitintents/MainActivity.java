@@ -68,13 +68,13 @@ public class MainActivity extends AppCompatActivity {
      * @param v Button that was clicked.
      */
     public void onClickShareTextButton(View v) {
-        // COMPLETED (5) Specify a String you'd like to share
+        // TODO COMPLETED (5) Specify a String you'd like to share
         /* Create the String that you want to share */
         String textThatYouWantToShare =
                 "Sharing the coolest thing I've learned so far. You should " +
                         "check out Udacity and Google's Android Nanodegree!";
 
-        // COMPLETED (6) Replace the Toast with shareText, passing in the String from step 5
+        // TODO COMPLETED (6) Replace the Toast with shareText, passing in the String from step 5
         /* Send that text to our method that will share it. */
         shareText(textThatYouWantToShare);
     }
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // COMPLETED (1) Create a void method called shareText that accepts a String as a parameter
+    // TODO COMPLETED (1) Create a void method called shareText that accepts a String as a parameter
     /**
      * This method shares text and allows the user to select which app they would like to use to
      * share the text. Using ShareCompat's IntentBuilder, we get some really cool functionality for
@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
      * @param textToShare Text that will be shared
      */
     private void shareText(String textToShare) {
-        // COMPLETED (2) Create a String variable called mimeType and set it to "text/plain"
+        // TODO COMPLETED (2) Create a String variable called mimeType and set it to "text/plain"
         /*
          * You can think of MIME types similarly to file extensions. They aren't the exact same,
          * but MIME types help a computer determine which applications can open which content. For
@@ -173,11 +173,11 @@ public class MainActivity extends AppCompatActivity {
          */
         String mimeType = "text/plain";
 
-        // COMPLETED (3) Create a title for the chooser window that will pop up
+        // TODO COMPLETED (3) Create a title for the chooser window that will pop up
         /* This is just the title of the window that will pop up when we call startActivity */
         String title = "Learning How to Share";
 
-        // COMPLETED (4) Use ShareCompat.IntentBuilder to build the Intent and start the chooser
+        // TODO COMPLETED (4) Use ShareCompat.IntentBuilder to build the Intent and start the chooser
         /* ShareCompat.IntentBuilder provides a fluent API for creating Intents */
         ShareCompat.IntentBuilder
                 /* The from method specifies the Context from which this share is coming from */

@@ -34,23 +34,23 @@ import android.widget.TextView;
  * If you don't like our puns, we named this Adapter GreenAdapter because its
  * contents are green.
  */
-// COMPLETED (4) From GreenAdapter, extend RecyclerView.Adapter<NumberViewHolder>
+// TODO COMPLETED (4) From GreenAdapter, extend RecyclerView.Adapter<NumberViewHolder>
 public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHolder> {
 
-    // COMPLETED (1) Add a private int variable called mNumberItems
+    // TODO COMPLETED (1) Add a private int variable called mNumberItems
     private int mNumberItems;
 
-    // COMPLETED (2) Create a constructor for GreenAdapter that accepts an int as a parameter for numberOfItems
+    // TODO COMPLETED (2) Create a constructor for GreenAdapter that accepts an int as a parameter for numberOfItems
 
     public GreenAdapter(int numberOfItems) {
         super();
         mNumberItems = numberOfItems;
     }
 
-    // COMPLETED (3) Store the numberOfItems parameter in mNumberItems
+    // TODO COMPLETED (3) Store the numberOfItems parameter in mNumberItems
 
-    // COMPLETED (5) Override the onCreateViewHolder method
-    // COMPLETED (6) Create and return a new NumberViewHolder within this method
+    // TODO COMPLETED (5) Override the onCreateViewHolder method
+    // TODO COMPLETED (6) Create and return a new NumberViewHolder within this method
 
     @Override
     public NumberViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
@@ -62,15 +62,15 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
     }
 
 
-    // COMPLETED (7) Override onBindViewHolder
-    // COMPLETED (8) Within onBindViewHolder, call holder.bind and pass in the position
+    // TODO COMPLETED (7) Override onBindViewHolder
+    // TODO COMPLETED (8) Within onBindViewHolder, call holder.bind and pass in the position
 
     @Override
     public void onBindViewHolder(NumberViewHolder holder, int position) {
         holder.bind(position);
     }
 
-    // COMPLETED (9) Override getItemCount and return the number of items to display
+    // TODO COMPLETED (9) Override getItemCount and return the number of items to display
 
     @Override
     public int getItemCount() {

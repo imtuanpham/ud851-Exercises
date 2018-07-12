@@ -4,22 +4,22 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-// COMPLETED (1) extend the SQLiteOpenHelper class
+// TODO COMPLETED (1) extend the SQLiteOpenHelper class
 public class WaitlistDbHelper extends SQLiteOpenHelper {
 
-    // COMPLETED (2) Create a static final String called DATABASE_NAME and set it to "waitlist.db"
+    // TODO COMPLETED (2) Create a static final String called DATABASE_NAME and set it to "waitlist.db"
     private static final String DATABASE_NAME = "waitlist.db";
 
-    // COMPLETED (3) Create a static final int called DATABASE_VERSION and set it to 1
+    // TODO COMPLETED (3) Create a static final int called DATABASE_VERSION and set it to 1
     private static final int DATABASE_VERSION = 1;
 
-    // COMPLETED (4) Create a Constructor that takes a context and calls the parent constructor
+    // TODO COMPLETED (4) Create a Constructor that takes a context and calls the parent constructor
 
-    // COMPLETED (5) Override the onCreate method
+    // TODO COMPLETED (5) Override the onCreate method
 
-        // COMPLETED (6) Inside, create an String query called SQL_CREATE_WAITLIST_TABLE that will create the table
+        // TODO COMPLETED (6) Inside, create an String query called SQL_CREATE_WAITLIST_TABLE that will create the table
 
-        // COMPLETED (7) Execute the query by calling execSQL on sqLiteDatabase and pass the string query SQL_CREATE_WAITLIST_TABLE
+        // TODO COMPLETED (7) Execute the query by calling execSQL on sqLiteDatabase and pass the string query SQL_CREATE_WAITLIST_TABLE
 
     public WaitlistDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -38,8 +38,8 @@ public class WaitlistDbHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(SQL_CREATE_WAITLIST_TABLE);
     }
 
-    // COMPLETED (8) Override the onUpgrade method
-    // COMPLETED (9) Inside, execute a drop table query, and then call onCreate to re-create it
+    // TODO COMPLETED (8) Override the onUpgrade method
+    // TODO COMPLETED (9) Inside, execute a drop table query, and then call onCreate to re-create it
 
 
     @Override

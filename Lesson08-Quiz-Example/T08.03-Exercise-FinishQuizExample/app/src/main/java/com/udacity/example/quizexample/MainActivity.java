@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Get the views
-        // COMPLETED (1) You'll probably want more than just the Button
+        // TODO COMPLETED (1) You'll probably want more than just the Button
         mButton = (Button) findViewById(R.id.button_next);
 
         mWordTextView = (TextView) findViewById(R.id.text_view_word);
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         // Change button text
         mButton.setText(getString(R.string.show_definition));
 
-        // COMPLETED (3) Go to the next word in the Cursor, show the next word and hide the definition
+        // TODO COMPLETED (3) Go to the next word in the Cursor, show the next word and hide the definition
         // Note that you shouldn't try to do this if the cursor hasn't been set yet.
         // If you reach the end of the list of words, you should start at the beginning again.
         mCurrentState = STATE_HIDDEN;
@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
         // Change button text
         mButton.setText(getString(R.string.next_word));
 
-        // COMPLETED (4) Show the definition
+        // TODO COMPLETED (4) Show the definition
         mCurrentState = STATE_SHOWN;
         mDefinitionTextView.setVisibility(View.VISIBLE);
 
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        // COMPLETED (5) Remember to close your cursor!
+        // TODO COMPLETED (5) Remember to close your cursor!
         mData.close();
     }
 
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
             // Set the data for MainActivity
             mData = cursor;
 
-            // COMPLETED (2) Initialize anything that you need the cursor for, such as setting up
+            // TODO COMPLETED (2) Initialize anything that you need the cursor for, such as setting up
             // the screen with the first word and setting any other instance variables
             nextWord();
         }

@@ -22,11 +22,11 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    // COMPLETED (26) Create an EditText variable called mSearchBoxEditText
+    // TODO COMPLETED (26) Create an EditText variable called mSearchBoxEditText
     private EditText mSearchBoxEditText;
 
-    // COMPLETED (27) Create a TextView variable called mUrlDisplayTextView
-    // COMPLETED (28) Create a TextView variable called mSearchResultsTextView
+    // TODO COMPLETED (27) Create a TextView variable called mUrlDisplayTextView
+    // TODO COMPLETED (28) Create a TextView variable called mSearchResultsTextView
     private TextView mUrlDisplayTextView;
     private TextView mSearchResultsTextView;
 
@@ -35,12 +35,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // COMPLETED (29) Use findViewById to get a reference to mSearchBoxEditText
+        // TODO COMPLETED (29) Use findViewById to get a reference to mSearchBoxEditText
         mSearchBoxEditText = (EditText) this.findViewById(R.id.et_search_box);
 
-        // COMPLETED (30) Use findViewById to get a reference to mUrlDisplayTextView
+        // TODO COMPLETED (30) Use findViewById to get a reference to mUrlDisplayTextView
         mUrlDisplayTextView = (TextView) this.findViewById(R.id.tv_url_display);
-        // COMPLETED (31) Use findViewById to get a reference to mSearchResultsTextView
+        // TODO COMPLETED (31) Use findViewById to get a reference to mSearchResultsTextView
         mSearchResultsTextView = (TextView) this.findViewById(R.id.tv_github_search_results_json);
     }
 }

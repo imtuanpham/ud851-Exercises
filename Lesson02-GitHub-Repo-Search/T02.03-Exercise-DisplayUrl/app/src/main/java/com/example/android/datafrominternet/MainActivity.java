@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
         mSearchResultsTextView = (TextView) findViewById(R.id.tv_github_search_results_json);
     }
 
-    // COMPLETED (2) Create a method called makeGithubSearchQuery
-    // COMPLETED (3) Within this method, build the URL with the text from the EditText and set the built URL to the TextView
+    // TODO COMPLETED (2) Create a method called makeGithubSearchQuery
+    // TODO COMPLETED (3) Within this method, build the URL with the text from the EditText and set the built URL to the TextView
     public void makeGithubSearchQuery () {
         String searchStr = mSearchBoxEditText.getText().toString();
         mUrlDisplayTextView.setText(NetworkUtils.buildUrl(searchStr).toString());
@@ -63,11 +63,11 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemThatWasClickedId = item.getItemId();
         if (itemThatWasClickedId == R.id.action_search) {
-            // COMPLETED (4) Remove the Toast message when the search menu item is clicked
+            // TODO COMPLETED (4) Remove the Toast message when the search menu item is clicked
 //            Context context = MainActivity.this;
 //            String textToShow = "Search clicked";
 //            Toast.makeText(context, textToShow, Toast.LENGTH_SHORT).show();
-            // COMPLETED (5) Call makeGithubSearchQuery when the search menu item is clicked
+            // TODO COMPLETED (5) Call makeGithubSearchQuery when the search menu item is clicked
 
             this.makeGithubSearchQuery();
 

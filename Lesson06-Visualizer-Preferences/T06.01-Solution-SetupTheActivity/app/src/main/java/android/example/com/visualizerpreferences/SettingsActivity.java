@@ -24,7 +24,7 @@ import android.view.MenuItem;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    // COMPLETED (1) Create a new Empty Activity named SettingsActivity; make sure to generate the
+    // TODO COMPLETED (1) Create a new Empty Activity named SettingsActivity; make sure to generate the
     // activity_settings.xml layout file as well and add the activity to the manifest
 
     @Override

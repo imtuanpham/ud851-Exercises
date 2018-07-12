@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Get the views
-        // COMPLETED (1) You'll probably want more than just the Button
+        // TODO COMPLETED (1) You'll probably want more than just the Button
         mWordTextView = (TextView) findViewById(R.id.text_view_word);
         mDefinitionTextView = (TextView) findViewById(R.id.text_view_definition);
         mButton = (Button) findViewById(R.id.button_next);
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void nextWord() {
-        // COMPLETED (3) Go to the next word in the Cursor, show the next word and hide the definition
+        // TODO COMPLETED (3) Go to the next word in the Cursor, show the next word and hide the definition
         // Note that you shouldn't try to do this if the cursor hasn't been set yet.
         // If you reach the end of the list of words, you should start at the beginning again.
 
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showDefinition() {
-        // COMPLETED (4) Show the definition
+        // TODO COMPLETED (4) Show the definition
         if (mData != null) {
             // Show the definition TextView
             mDefinitionTextView.setVisibility(View.VISIBLE);
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        // COMPLETED (5) Remember to close your cursor!
+        // TODO COMPLETED (5) Remember to close your cursor!
         mData.close();
     }
 
@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Cursor cursor) {
             super.onPostExecute(cursor);
-            // COMPLETED (2) Initialize anything that you need the cursor for, such as setting up
+            // TODO COMPLETED (2) Initialize anything that you need the cursor for, such as setting up
             // the screen with the first word and setting any other instance variables
 
             //Set up a bunch of instance variables based off of the data

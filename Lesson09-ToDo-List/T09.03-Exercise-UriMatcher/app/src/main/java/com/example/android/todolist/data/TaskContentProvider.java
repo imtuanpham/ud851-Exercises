@@ -27,17 +27,17 @@ import android.support.annotation.NonNull;
 // Verify that TaskContentProvider extends from ContentProvider and implements required methods
 public class TaskContentProvider extends ContentProvider {
 
-    // COMPLETED (1) Define final integer constants for the directory of tasks and a single item.
+    // TODO COMPLETED (1) Define final integer constants for the directory of tasks and a single item.
     // It's convention to use 100, 200, 300, etc for directories,
     // and related ints (101, 102, ..) for items in that directory.
 
     public static final int TASKS = 100;
     public static final int TASK_WITH_ID = 101;
 
-    // COMPLETED (3) Declare a static variable for the Uri matcher that you construct
+    // TODO COMPLETED (3) Declare a static variable for the Uri matcher that you construct
     private static UriMatcher sUriMatcher = buildUriMatcher();
 
-    // COMPLETED (2) Define a static buildUriMatcher method that associates URI's with their int match
+    // TODO COMPLETED (2) Define a static buildUriMatcher method that associates URI's with their int match
     public static UriMatcher buildUriMatcher() {
         UriMatcher uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 

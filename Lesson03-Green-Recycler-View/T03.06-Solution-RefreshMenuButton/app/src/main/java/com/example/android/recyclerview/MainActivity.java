@@ -71,19 +71,19 @@ public class MainActivity extends AppCompatActivity {
         mNumbersList.setAdapter(mAdapter);
     }
 
-    // COMPLETED (7) Override onCreateOptionsMenu
-    // COMPLETED (8) Use getMenuInflater().inflate to inflate the menu
-    // COMPLETED (9) Return true to display this menu
+    // TODO COMPLETED (7) Override onCreateOptionsMenu
+    // TODO COMPLETED (8) Use getMenuInflater().inflate to inflate the menu
+    // TODO COMPLETED (9) Return true to display this menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
-    // COMPLETED (10) Override onOptionsItemSelected
-    // COMPLETED (11) Within this method, get the ID from the MenuItem
-    // COMPLETED (12) If the ID equals R.id.action_refresh, create and set a new adapter on the RecyclerView and return true
-    // COMPLETED (13) For now, for all other IDs, return super.onOptionsItemSelected
+    // TODO COMPLETED (10) Override onOptionsItemSelected
+    // TODO COMPLETED (11) Within this method, get the ID from the MenuItem
+    // TODO COMPLETED (12) If the ID equals R.id.action_refresh, create and set a new adapter on the RecyclerView and return true
+    // TODO COMPLETED (13) For now, for all other IDs, return super.onOptionsItemSelected
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 

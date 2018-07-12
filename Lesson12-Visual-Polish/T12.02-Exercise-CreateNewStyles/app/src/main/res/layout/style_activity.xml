@@ -12,9 +12,9 @@
     tools:context="com.example.android.visualpolish.StyleActivity">
 
     <!-- All mail folder views -->
-    <!-- COMPLETED (3) Apply the "folderStyle" to all of these views and delete the redundant properties -->
+    <!-- TODO COMPLETED (3) Apply the "folderStyle" to all of these views and delete the redundant properties -->
 
-    <!-- COMPLETED (5) Apply the "inboxStyle" to the inbox text view -->
+    <!-- TODO COMPLETED (5) Apply the "inboxStyle" to the inbox text view -->
     <TextView
         android:drawableStart="@drawable/ic_inbox"
         android:drawableLeft="@drawable/ic_inbox"

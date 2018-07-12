@@ -61,11 +61,11 @@ public class MainActivity extends AppCompatActivity {
                  */
                 Context context = MainActivity.this;
 
-                // COMPLETED (1) Store ChildActivity.class in a Class object called destinationActivity
+                // TODO COMPLETED (1) Store ChildActivity.class in a Class object called destinationActivity
                 /* This is the class that we want to start (and open) when the button is clicked. */
                 Class destinationActivity = ChildActivity.class;
 
-                // COMPLETED (2) Create an Intent to start ChildActivity
+                // TODO COMPLETED (2) Create an Intent to start ChildActivity
                 /*
                  * Here, we create the Intent that will start the Activity we specified above in
                  * the destinationActivity variable. The constructor for an Intent also requires a
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                  */
                 Intent startChildActivityIntent = new Intent(context, destinationActivity);
 
-                // COMPLETED (3) Replace the Toast with code to start ChildActivity
+                // TODO COMPLETED (3) Replace the Toast with code to start ChildActivity
                 /*
                  * Once the Intent has been created, we can use Activity's method, "startActivity"
                  * to start the ChildActivity.

@@ -32,7 +32,7 @@ import com.udacity.example.droidtermsprovider.DroidTermsExampleContract;
 
 public class MainActivity extends AppCompatActivity {
 
-    // COMPLETED (3) Create an instance variable storing a Cursor called mData
+    // TODO COMPLETED (3) Create an instance variable storing a Cursor called mData
     // The data from the DroidTermsExample content provider
     private Cursor mData;
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         mButton = (Button) findViewById(R.id.button_next);
 
         //Run the database operation to get the cursor off of the main thread
-        // COMPLETED (5) Create and execute your AsyncTask here
+        // TODO COMPLETED (5) Create and execute your AsyncTask here
         new WordFetchTask().execute();
 
     }
@@ -100,10 +100,10 @@ public class MainActivity extends AppCompatActivity {
         mCurrentState = STATE_SHOWN;
 
     }
-    // COMPLETED (1) Create AsyncTask with the following generic types <Void, Void, Cursor>
-    // COMPLETED (2) In the doInBackground method, write the code to access the DroidTermsExample
+    // TODO COMPLETED (1) Create AsyncTask with the following generic types <Void, Void, Cursor>
+    // TODO COMPLETED (2) In the doInBackground method, write the code to access the DroidTermsExample
     // provider and return the Cursor object
-    // COMPLETED (4) In the onPostExecute method, store the Cursor object in mData
+    // TODO COMPLETED (4) In the onPostExecute method, store the Cursor object in mData
 
     // Use an async task to do the data fetch off of the main thread.
     public class WordFetchTask extends AsyncTask<Void, Void, Cursor> {

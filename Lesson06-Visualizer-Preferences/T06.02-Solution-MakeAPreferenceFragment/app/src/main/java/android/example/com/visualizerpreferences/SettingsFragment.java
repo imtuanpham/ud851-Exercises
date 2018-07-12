@@ -29,11 +29,11 @@ import android.widget.Toast;
 
 
 public class SettingsFragment extends PreferenceFragmentCompat {
-    // COMPLETED (2) Create a class called SettingsFragment that extends PreferenceFragmentCompat
+    // TODO COMPLETED (2) Create a class called SettingsFragment that extends PreferenceFragmentCompat
 
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
-        // COMPLETED (5) In SettingsFragment's onCreatePreferences method add the preference file using the
+        // TODO COMPLETED (5) In SettingsFragment's onCreatePreferences method add the preference file using the
         // addPreferencesFromResource method
 
         // Add visualizer preferences, defined in the XML file in res->xml->pref_visualizer

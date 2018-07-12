@@ -19,10 +19,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-// COMPLETED (1) Use Android Studio's Activity wizard to create a new Activity called ChildActivity
+// TODO COMPLETED (1) Use Android Studio's Activity wizard to create a new Activity called ChildActivity
 public class ChildActivity extends AppCompatActivity {
 
-    // COMPLETED (6) Create a TextView field to display your message
+    // TODO COMPLETED (6) Create a TextView field to display your message
     /* Field to store our TextView */
     private TextView mDisplayText;
 
@@ -31,7 +31,7 @@ public class ChildActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_child);
 
-        // COMPLETED (7) Get a reference to your TextView in Java
+        // TODO COMPLETED (7) Get a reference to your TextView in Java
         /* Typical usage of findViewById... */
         mDisplayText = (TextView) findViewById(R.id.tv_display);
     }

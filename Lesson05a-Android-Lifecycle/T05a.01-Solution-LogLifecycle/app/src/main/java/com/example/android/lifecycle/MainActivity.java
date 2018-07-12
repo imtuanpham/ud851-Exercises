@@ -47,11 +47,11 @@ public class MainActivity extends AppCompatActivity {
 
         mLifecycleDisplay = (TextView) findViewById(R.id.tv_lifecycle_events_display);
 
-        // COMPLETED (1) Use logAndAppend within onCreate
+        // TODO COMPLETED (1) Use logAndAppend within onCreate
         logAndAppend(ON_CREATE);
     }
 
-    // COMPLETED (2) Override onStart, call super.onStart, and call logAndAppend with ON_START
+    // TODO COMPLETED (2) Override onStart, call super.onStart, and call logAndAppend with ON_START
     /**
      * Called when the activity is becoming visible to the user.
      *
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         logAndAppend(ON_START);
     }
 
-    // COMPLETED (3) Override onResume, call super.onResume, and call logAndAppend with ON_RESUME
+    // TODO COMPLETED (3) Override onResume, call super.onResume, and call logAndAppend with ON_RESUME
     /**
      * Called when the activity will start interacting with the user. At this point your activity
      * is at the top of the activity stack, with user input going to it.
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         logAndAppend(ON_RESUME);
     }
 
-    // COMPLETED (4) Override onPause, call super.onPause, and call logAndAppend with ON_PAUSE
+    // TODO COMPLETED (4) Override onPause, call super.onPause, and call logAndAppend with ON_PAUSE
     /**
      * Called when the system is about to start resuming a previous activity. This is typically
      * used to commit unsaved changes to persistent data, stop animations and other things that may
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         logAndAppend(ON_PAUSE);
     }
 
-    // COMPLETED (5) Override onStop, call super.onStop, and call logAndAppend with ON_STOP
+    // TODO COMPLETED (5) Override onStop, call super.onStop, and call logAndAppend with ON_STOP
     /**
      * Called when the activity is no longer visible to the user, because another activity has been
      * resumed and is covering this one. This may happen either because a new activity is being
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         logAndAppend(ON_STOP);
     }
 
-    // COMPLETED (6) Override onRestart, call super.onRestart, and call logAndAppend with ON_RESTART
+    // TODO COMPLETED (6) Override onRestart, call super.onRestart, and call logAndAppend with ON_RESTART
     /**
      * Called after your activity has been stopped, prior to it being started again.
      *
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         logAndAppend(ON_RESTART);
     }
 
-    // COMPLETED (7) Override onDestroy, call super.onDestroy, and call logAndAppend with ON_DESTROY
+    // TODO COMPLETED (7) Override onDestroy, call super.onDestroy, and call logAndAppend with ON_DESTROY
     /**
      * The final call you receive before your activity is destroyed. This can happen either because
      * the activity is finishing (someone called finish() on it, or because the system is

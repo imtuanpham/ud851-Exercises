@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- COMPLETED (1) Add two more checkboxes for the treble and mid-range -->
+    <!-- TODO COMPLETED (1) Add two more checkboxes for the treble and mid-range -->
     <CheckBoxPreference
         android:defaultValue="@bool/pref_show_bass_default"
         android:key="@string/pref_show_bass_key"

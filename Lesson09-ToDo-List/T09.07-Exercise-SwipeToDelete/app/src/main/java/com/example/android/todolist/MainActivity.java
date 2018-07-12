@@ -79,15 +79,15 @@ public class MainActivity extends AppCompatActivity implements
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int swipeDir) {
                 // Here is where you'll implement swipe to delete
 
-                // COMPLETED (1) Construct the URI for the item to delete
+                // TODO COMPLETED (1) Construct the URI for the item to delete
                 //[Hint] Use getTag (from the adapter code) to get the id of the swiped item
                 int id = (int) viewHolder.itemView.getTag();
                 Uri deleteUri = TaskContract.TaskEntry.CONTENT_URI.buildUpon().appendPath(String.valueOf(id)).build();
 
-                // COMPLETED (2) Delete a single row of data using a ContentResolver
+                // TODO COMPLETED (2) Delete a single row of data using a ContentResolver
                 getContentResolver().delete(deleteUri, null, null);
 
-                // COMPLETED (3) Restart the loader to re-query for all tasks after a deletion
+                // TODO COMPLETED (3) Restart the loader to re-query for all tasks after a deletion
                 getSupportLoaderManager().restartLoader(TASK_LOADER_ID, null, MainActivity.this);
             }
         }).attachToRecyclerView(mRecyclerView);

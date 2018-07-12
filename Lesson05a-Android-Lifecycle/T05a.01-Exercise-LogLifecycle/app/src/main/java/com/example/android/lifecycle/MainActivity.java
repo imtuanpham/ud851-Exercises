@@ -47,11 +47,11 @@ public class MainActivity extends AppCompatActivity {
 
         mLifecycleDisplay = (TextView) findViewById(R.id.tv_lifecycle_events_display);
 
-        // COMPLETED (1) Use logAndAppend within onCreate
+        // TODO COMPLETED (1) Use logAndAppend within onCreate
         logAndAppend(ON_CREATE);
     }
 
-    // COMPLETED (2) Override onStart, call super.onStart, and call logAndAppend with ON_START
+    // TODO COMPLETED (2) Override onStart, call super.onStart, and call logAndAppend with ON_START
     @Override
     protected void onStart() {
         super.onStart();
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         logAndAppend(ON_START);
     }
 
-    // COMPLETED (3) Override onResume, call super.onResume, and call logAndAppend with ON_RESUME
+    // TODO COMPLETED (3) Override onResume, call super.onResume, and call logAndAppend with ON_RESUME
     @Override
     protected void onResume() {
         super.onResume();
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         logAndAppend(ON_RESUME);
     }
 
-    // COMPLETED (4) Override onPause, call super.onPause, and call logAndAppend with ON_PAUSE
+    // TODO COMPLETED (4) Override onPause, call super.onPause, and call logAndAppend with ON_PAUSE
 
     @Override
     protected void onPause() {
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         logAndAppend(ON_PAUSE);
     }
 
-    // COMPLETED (5) Override onStop, call super.onStop, and call logAndAppend with ON_STOP
+    // TODO COMPLETED (5) Override onStop, call super.onStop, and call logAndAppend with ON_STOP
 
     @Override
     protected void onStop() {
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         logAndAppend(ON_STOP);
     }
 
-    // COMPLETED (6) Override onRestart, call super.onRestart, and call logAndAppend with ON_RESTART
+    // TODO COMPLETED (6) Override onRestart, call super.onRestart, and call logAndAppend with ON_RESTART
 
     @Override
     protected void onRestart() {
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // COMPLETED (7) Override onDestroy, call super.onDestroy, and call logAndAppend with ON_DESTROY
+    // TODO COMPLETED (7) Override onDestroy, call super.onDestroy, and call logAndAppend with ON_DESTROY
 
     @Override
     protected void onDestroy() {

@@ -26,17 +26,17 @@ public class NotificationUtils {
     public static final int WATER_REMINDER_NOTIFICATION_ID = 101;
     public static final String WATER_REMINDER_NOTIFICATION_CHANNEL_ID = "hydration-notification-channel";
 
-    // COMPLETED (7) Create a method called remindUserBecauseCharging which takes a Context.
+    // TODO COMPLETED (7) Create a method called remindUserBecauseCharging which takes a Context.
     // This method will create a notification for charging. It might be helpful
     // to take a look at this guide to see an example of what the code in this method will look like:
     // https://developer.android.com/training/notify-user/build-notification.html
 
     public static void remindUserBecauseCharging(Context context) {
 
-        // COMPLETED (8) Get the NotificationManager using context.getSystemService
+        // TODO COMPLETED (8) Get the NotificationManager using context.getSystemService
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
-        // COMPLETED (9) Create a notification channel for Android O devices
+        // TODO COMPLETED (9) Create a notification channel for Android O devices
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel mChannel = new NotificationChannel(
                     WATER_REMINDER_NOTIFICATION_CHANNEL_ID,
@@ -47,7 +47,7 @@ public class NotificationUtils {
             notificationManager.createNotificationChannel(mChannel);
         }
 
-        // COMPLETED (10) In the remindUser method use NotificationCompat.Builder to create a notification
+        // TODO COMPLETED (10) In the remindUser method use NotificationCompat.Builder to create a notification
         // that:
         // - has a color of R.colorPrimary - use ContextCompat.getColor to get a compatible color
         // - has ic_drink_notification as the small icon
@@ -71,27 +71,27 @@ public class NotificationUtils {
                 .setAutoCancel(true);
 
 
-        // COMPLETED (11) If the build version is greater than JELLY_BEAN and lower than OREO,
+        // TODO COMPLETED (11) If the build version is greater than JELLY_BEAN and lower than OREO,
         // set the notification's priority to PRIORITY_HIGH.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN
                 && Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
             notificationBuilder.setPriority(NotificationCompat.PRIORITY_HIGH);
         }
-        // COMPLETED (12) Trigger the notification by calling notify on the NotificationManager.
+        // TODO COMPLETED (12) Trigger the notification by calling notify on the NotificationManager.
         // Pass in a unique ID of your choosing for the notification and notificationBuilder.build()
         notificationManager.notify(WATER_REMINDER_NOTIFICATION_ID, notificationBuilder.build());
     }
 
 
-    // COMPLETED (1) Create a helper method called contentIntent with a single parameter for a Context. It
+    // TODO COMPLETED (1) Create a helper method called contentIntent with a single parameter for a Context. It
     // should return a PendingIntent. This method will create the pending intent which will trigger when
     // the notification is pressed. This pending intent should open up the MainActivity.
     public static PendingIntent contentIntent(Context context) {
 
-        // COMPLETED (2) Create an intent that opens up the MainActivity
+        // TODO COMPLETED (2) Create an intent that opens up the MainActivity
         Intent intent = new Intent(context, MainActivity.class);
 
-        // COMPLETED (3) Create a PendingIntent using getActivity that:
+        // TODO COMPLETED (3) Create a PendingIntent using getActivity that:
         // - Take the context passed in as a parameter
         // - Takes an unique integer ID for the pending intent (you can create a constant for
         //   this integer above
@@ -106,14 +106,14 @@ public class NotificationUtils {
         return pendingIntent;
     }
 
-    // COMPLETED (4) Create a helper method called largeIcon which takes in a Context as a parameter and
+    // TODO COMPLETED (4) Create a helper method called largeIcon which takes in a Context as a parameter and
     // returns a Bitmap. This method is necessary to decode a bitmap needed for the notification.
     public static Bitmap largeIcon(Context context) {
 
-        // COMPLETED (5) Get a Resources object from the context.
+        // TODO COMPLETED (5) Get a Resources object from the context.
         Resources r = context.getResources();
 
-        // COMPLETED (6) Create and return a bitmap using BitmapFactory.decodeResource, passing in the
+        // TODO COMPLETED (6) Create and return a bitmap using BitmapFactory.decodeResource, passing in the
         // resources object and R.drawable.ic_local_drink_black_24px
 
         return BitmapFactory.decodeResource(r, R.drawable.ic_local_drink_black_24px);

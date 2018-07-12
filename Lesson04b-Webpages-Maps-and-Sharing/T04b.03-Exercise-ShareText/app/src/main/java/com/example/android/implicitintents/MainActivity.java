@@ -67,10 +67,10 @@ public class MainActivity extends AppCompatActivity {
      * @param v Button that was clicked.
      */
     public void onClickShareTextButton(View v) {
-        // COMPLETED (5) Specify a String you'd like to share
+        // TODO COMPLETED (5) Specify a String you'd like to share
         String textToShare = "Awesome text";
 
-        // COMPLETED (6) Replace the Toast with shareText, passing in the String from step 5
+        // TODO COMPLETED (6) Replace the Toast with shareText, passing in the String from step 5
         Toast.makeText(this, "Sharing text...", Toast.LENGTH_SHORT).show();
 
         shareText(textToShare);
@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // COMPLETED (1) Create a void method called shareText that accepts a String as a parameter
+    // TODO COMPLETED (1) Create a void method called shareText that accepts a String as a parameter
     private void shareText(String textToShare) {
         String mimeType = "text/plain";
         String title = "Sharing is Caring...";
@@ -165,9 +165,9 @@ public class MainActivity extends AppCompatActivity {
 
     // Do steps 2 - 4 within the shareText method
 
-        // COMPLETED (2) Create a String variable called mimeType and set it to "text/plain"
+        // TODO COMPLETED (2) Create a String variable called mimeType and set it to "text/plain"
 
-        // COMPLETED (3) Create a title for the chooser window that will pop up
+        // TODO COMPLETED (3) Create a title for the chooser window that will pop up
 
-        // COMPLETED (4) Use ShareCompat.IntentBuilder to build the Intent and start the chooser
+        // TODO COMPLETED (4) Use ShareCompat.IntentBuilder to build the Intent and start the chooser
 }
